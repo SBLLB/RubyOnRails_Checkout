@@ -2,6 +2,10 @@
 
 #### Project planning. Considerations prior to starting:
 
+* Could use shopping cart gem? 
+    * e.g. acts_as_shopping_cart / active-cart...
+    * Prefer to build from scratch to demonstrate more of my base understanding of Ruby and RoR.  
+
 * Flexibility needed in the future for promotions used. What types of discount code can there be? 
     * Buy X get X free (Buy 1 lavender flower, get 1 free) *QuantityBought, ItemBought, QuantityFree, ItemFree*
     * Buy X get X at £ (buy 2 or more lavender hearts then the price drops to £8.50) *QuantityBought, ItemBought, PromoPrice*   
