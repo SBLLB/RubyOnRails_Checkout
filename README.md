@@ -17,6 +17,9 @@
     * When cart's created? If so promo rules could change throughout the shopping cart's duration. Also keep in mind single responsibility. Checkout is for when you checkout, not to do with collating the items?
     * Treat cart and checkout separately. Cart can have running total function that returns current price based on current promo rules?
 
+* How do you get a zero filled field such as 001 for the product codes?  
+    * char_at(value, 000) function?
+
 
 
 
