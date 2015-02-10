@@ -17,10 +17,11 @@ context "When adding an item to the cart" do
     expect(page).to have_content 'Lavender Heart'
   end
 
-  xit "you should be redirected to your cart summary" do
+  it "you should be redirected to your cart summary" do
     Product.create(product_code: 1, product_name: 'Lavender Heart', price: 9.95)
     visit '/'
-    expect(current_path).to contain 'cart'
+    click_button 'Add to Cart'
+    expect(current_path).to have_content 'cart'
   end
 
 end
