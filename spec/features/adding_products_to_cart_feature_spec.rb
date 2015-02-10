@@ -17,10 +17,10 @@ context "When adding an item to the cart" do
     expect(page).to have_content 'Lavender Heart'
   end
 
-  xit "a session cart_id should be created" do
+  xit "you should be redirected to your cart summary" do
     Product.create(product_code: 1, product_name: 'Lavender Heart', price: 9.95)
     visit '/'
-    expect(page).to have_selector(:link_or_button, 'Add to Cart')
+    expect(current_path).to contain 'cart'
   end
 
 end
