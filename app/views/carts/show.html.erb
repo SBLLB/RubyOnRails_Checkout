@@ -1,0 +1,9 @@
+<section>
+  <h1>Your Cart</h1>
+  <ul>
+    <% @cart.line_items.each do |line_item| %>  
+      <li> <%= line_item.product.product_name %>, <%=number_to_currency(line_item.product.price, unit: :£) %>
+      </li>
+    <% end %>
+  </ul>
+<section>
