@@ -10,4 +10,8 @@ before_action :set_cart, only: [:create]
     redirect_to carts_path(product)
   end
 
+  def destroy
+
+  end
+
 end
