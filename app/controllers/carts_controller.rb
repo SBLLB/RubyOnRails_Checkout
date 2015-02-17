@@ -11,7 +11,7 @@ before_action :set_cart
   def destroy
     cart = Cart.find(@cart.id)
     cart.destroy
-    redirect_to root_path
+    redirect_to root_url
   end
 
 end

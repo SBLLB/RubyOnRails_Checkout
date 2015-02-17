@@ -7,7 +7,7 @@ before_action :set_cart, only: [:create]
   def create
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product.id)
-    redirect_to carts_path
+    redirect_to carts_url
   end
 
   def destroy
