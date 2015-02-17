@@ -24,11 +24,11 @@ feature "When viewing the cart" do
       expect(page).to have_content('Unit Price: £9.95')
     end 
 
-    # it "should display a total item price" do 
-    #   visit '/'
-    #   click_button 'Add to Cart'
-    #   expect(page).to have_content('Total Item Price: £19.90')
-    # end 
+    it "should display a total item price" do 
+      visit '/'
+      click_button 'Add to Cart'
+      expect(page).to have_content('Total Item Price: £19.90')
+    end 
 
   end
 

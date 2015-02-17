@@ -5,7 +5,7 @@
       <h2> Your Shopping Cart Is Empty </h2>
     <% else %>
       <% @cart.line_items.each do |line_item| %>  
-        <li> <%= line_item.product.product_name %>, Quantity: <%= line_item.quantity %>, Unit Price:  <%=number_to_currency(line_item.unit_price, unit: :£) %>
+        <li> <%= line_item.product.product_name %>, Quantity: <%= line_item.quantity %>, Unit Price:  <%=number_to_currency(line_item.unit_price, unit: :£) %>, Total Item Price: <%=number_to_currency(line_item.total_line_price, unit: :£) %>
 
          <%= button_to 'Remove from Cart', line_item_path(line_item.id), :method => :delete, :class=>:destroy %>
         </li>
