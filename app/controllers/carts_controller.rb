@@ -8,4 +8,10 @@ before_action :set_cart
     
   end
 
+  def destroy
+    cart = Cart.find(@cart.id)
+    cart.destroy
+    redirect_to root_path
+  end
+
 end
