@@ -6,7 +6,7 @@ before_action :set_cart, only: [:create]
 
   def create
     product = Product.find(params[:product_id])
-    @line_item = @cart.line_items.create(product: product)
+    @line_item = @cart.add_product(product.id)
     redirect_to carts_path
   end
 
@@ -18,7 +18,6 @@ before_action :set_cart, only: [:create]
       format.html { redirect_to(carts_path) }
       format.xml  { head :ok }
     end
-
   end
 
 end
